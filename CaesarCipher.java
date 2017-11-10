@@ -61,7 +61,7 @@ public class CaesarCipher {
 
             for (int i = 0; i < word.length(); i++) {
                 int newInt = find(word.charAt(i)) - k % 26;
-                if (newInt > 25) {
+                if (newInt < 0) {
                     newInt = newInt + 26;
                 }
                 littleWord = littleWord + alphabet.get(newInt);
